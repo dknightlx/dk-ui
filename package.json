@@ -7,7 +7,8 @@
     "example": "examples"
   },
   "scripts": {
-    "dev": "HOST=0.0.0.0 PORT=5000 nuxt"
+    "dev": "HOST=0.0.0.0 PORT=5000 nuxt",
+    "build": "node build/build.js"
   },
   "author": "DK",
   "license": "ISC",
@@ -16,6 +17,8 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint-friendly-formatter": "^3.0.0",
-    "nuxt": "^1.3.0"
+    "nuxt": "^1.3.0",
+    "webpack": "^4.0.0-beta.3",
+    "webpack-merge": "^4.1.2"
   }
 }
