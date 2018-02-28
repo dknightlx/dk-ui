@@ -1,8 +1,0 @@
-var path = require('path')
-
-var env = process.env.BUILD_ENV || 'dev';
-
-// 根据 BUILD_ENV 选择配置
-var config = require('./' + env + '.env.js');
-
-module.exports = config;

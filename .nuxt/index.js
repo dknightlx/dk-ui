@@ -12,6 +12,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
+import nuxt_plugin_normalize_3939960e from 'nuxt_plugin_normalize_3939960e' // Source: ../config/plugins/normalize (ssr: false)
 
 
 // Component: <no-ssr>
@@ -134,6 +135,9 @@ async function createApp (ssrContext) {
   // Plugin execution
   
   
+  if (process.browser) { 
+    if (typeof nuxt_plugin_normalize_3939960e === 'function') await nuxt_plugin_normalize_3939960e(app.context, inject)
+  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {
